@@ -1,12 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     private float leftBound = -2.1f;
     private float rightBound = 2.1f;
 
-    public float hInput;
-    public float speed;
+    public Button moveRightButton;
+    public Button moveLeftButton;
+
+    public float forceMult = 5;
     private Rigidbody playerRb;
     public float gravityMod;
 
@@ -20,17 +23,16 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         
-
         Physics.gravity *= gravityMod;
     }
 
     // Update is called once per frame
     void Update()
     {
-        hInput = Input.GetAxis("Horizontal");
+        //moveRightButton.onClick.AddListener(MoveRight);
+        //moveLeftButton.onClick.AddListener(MoveLeft);
         
-        transform.Translate(Vector3.right * Time.deltaTime * speed * hInput);
-        
+
         if(transform.position.x < leftBound)
         {
             transform.position = new Vector3(leftBound, transform.position.y, transform.position.z);
@@ -40,5 +42,21 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = new Vector3(rightBound, transform.position.y, transform.position.z);
         }
+    }
+
+
+    public void Movement()
+    {
+        //while loop for player movement here
+    }
+
+    public void MoveRight()
+    {
+        playerRb.AddForce(transform.right * Time.deltaTime * forceMult);
+    }
+
+    public void MoveLeft()
+    {
+        playerRb.AddForce(-transform.right * Time.deltaTime * forceMult);
     }
 }
