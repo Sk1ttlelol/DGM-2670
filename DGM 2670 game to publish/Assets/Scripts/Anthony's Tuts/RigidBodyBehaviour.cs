@@ -9,7 +9,7 @@ public class RigidBodyBehaviour : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddExplosionForce(force, Vector3.forward, 30f);
+        rb.transform.Translate(Vector3.up * Time.deltaTime * force);
     }
     
 }
