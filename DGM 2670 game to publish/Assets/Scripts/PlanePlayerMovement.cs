@@ -8,6 +8,8 @@ public class PlanePlayerMovement : MonoBehaviour
 {
     public float speed;
     public float rotationOffset;
+
+    private float boundBox = 2.15f;
     void Start()
     {
         
@@ -30,6 +32,16 @@ public class PlanePlayerMovement : MonoBehaviour
         Vector3 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         targetPos.z = 0;
         transform.position = Vector3.MoveTowards(transform.position, targetPos,speed * Time.deltaTime);
+        
+        if (transform.position.x < -boundBox)
+        {
+            transform.position = new Vector3(-boundBox, transform.position.y, transform.position.z);
+        }
+        
+        if (transform.position.x > boundBox)
+        {
+            transform.position = new Vector3(boundBox, transform.position.y, transform.position.z);
+        }
 
     }
 }
