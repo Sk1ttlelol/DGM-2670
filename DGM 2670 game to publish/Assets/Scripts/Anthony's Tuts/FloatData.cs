@@ -26,4 +26,14 @@ public class FloatData : ScriptableObject
             value += num;
         }
     }
+
+    public void AddHealthToPlayer(float num)
+    {
+        value += num;
+    }
+
+    public void RemoveHealthFromPlayer(float num)
+    {
+        value += num;
+    }
 }

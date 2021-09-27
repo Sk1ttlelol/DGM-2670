@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -7828897016884619059}
   - component: {fileID: -136137937764253860}
   - component: {fileID: 3908597405969821992}
+  - component: {fileID: -3603927054735297953}
   m_Layer: 0
   m_Name: Enemy_Type_1
   m_TagString: Enemy
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 6
+  timedDestruction: 1
 --- !u!54 &-136137937764253860
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,3 +158,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
+--- !u!114 &-3603927054735297953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199276590755073424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2126f42844ca6504097b9224ab6589b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 997b070ffe5236b45a3c5364e6a788ed, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: RemoveHealthFromPlayer
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -5,12 +5,21 @@ using UnityEngine;
 public class DestroyerBehaviour : MonoBehaviour
 {
     public float holdTime = 2f;
-
+    public bool timedDestruction = true;
+    
+    
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(holdTime);
-        Destroy(gameObject);
+        if (timedDestruction)
+        {
+            yield return new WaitForSeconds(holdTime);
+            Destroy(gameObject);
+        }
     }
-    
-    
+
+    public void Destroy()
+    {
+        
+    }
+
 }
