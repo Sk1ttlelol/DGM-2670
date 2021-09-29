@@ -19,7 +19,7 @@ public class DestroyerBehaviour : MonoBehaviour
 
     public void Destroy()
     {
-        
+        Destroy(gameObject);
     }
 
 }

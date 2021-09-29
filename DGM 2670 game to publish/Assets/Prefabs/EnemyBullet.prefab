@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6911046738198435642}
   - component: {fileID: 6911046738198435641}
   - component: {fileID: 6911046738198435653}
+  - component: {fileID: -8689330241956404699}
+  - component: {fileID: -4739465060239143601}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: EnemyBullet
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6911046738198435640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.04, y: 4.44, z: 0}
-  m_LocalScale: {x: 0.38929, y: 0.38929, z: 0.38929}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,3 +126,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -4739465060239143601}
+        m_TargetAssemblyTypeName: DestroyerBehaviour, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-8689330241956404699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6911046738198435640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad32a1097e750c488cea931a5cf6c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &-4739465060239143601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6911046738198435640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c164671d76953d042914bb404cbdabbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTime: 0
+  timedDestruction: 0

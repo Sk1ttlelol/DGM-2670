@@ -456,7 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7158303509553750548, guid: a3173cecc5275b140a4dfe9671c73924, type: 3}
   startDelay: 0.1
-  repeatRate: 0.0001
+  repeatRate: 0.1
 --- !u!1 &530548878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2483,6 +2483,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  speed: 0
 --- !u!4 &1781331427
 Transform:
   m_ObjectHideFlags: 0
