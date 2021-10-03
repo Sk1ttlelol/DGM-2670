@@ -157,3 +157,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 10
+  thisDrop: {fileID: 11400000, guid: 136c4570fc5c1af42900d1abd56e970c, type: 2}

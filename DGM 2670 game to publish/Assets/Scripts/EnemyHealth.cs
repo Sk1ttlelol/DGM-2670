@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
    public float enemyHealth = 10f;
+   public LootTable thisDrop;
    
    private DealDamage dealDamageScript;
 
@@ -15,7 +16,21 @@ public class EnemyHealth : MonoBehaviour
       if (enemyHealth <= 0)
       {
          EnemyDeath();
+         CreateDrop();
       }
+   }
+
+   private void CreateDrop()
+   {
+      if (thisDrop != null)
+      {
+         GameObject current = thisDrop.GetPowerup();
+         if (current != null)
+         {
+            Instantiate(current.gameObject, transform.position, Quaternion.identity);
+         }
+      }
+         
    }
    
    public void OnCollisionEnter(Collision other)
