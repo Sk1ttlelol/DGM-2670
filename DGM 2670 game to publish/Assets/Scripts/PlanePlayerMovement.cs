@@ -8,12 +8,9 @@ public class PlanePlayerMovement : MonoBehaviour
 {
     public float speed;
     public float rotationOffset;
-
+    
     private float boundBox = 2.15f;
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()
@@ -44,4 +41,5 @@ public class PlanePlayerMovement : MonoBehaviour
         }
 
     }
+    
 }
