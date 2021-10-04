@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
    public float enemyHealth = 10f;
    public LootTable thisDrop;
+   public IntData score;
    
    private DealDamage dealDamageScript;
 
