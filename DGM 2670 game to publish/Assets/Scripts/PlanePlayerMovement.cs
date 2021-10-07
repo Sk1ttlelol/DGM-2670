@@ -8,7 +8,7 @@ public class PlanePlayerMovement : MonoBehaviour
 {
     public float speed;
     public float rotationOffset;
-    
+
     private float boundBox = 2.15f;
    
 
@@ -39,7 +39,7 @@ public class PlanePlayerMovement : MonoBehaviour
         {
             transform.position = new Vector3(boundBox, transform.position.y, transform.position.z);
         }
-
+        
     }
     
 }

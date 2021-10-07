@@ -12,12 +12,11 @@ GameObject:
   - component: {fileID: 7833716430967300570}
   - component: {fileID: 2230669684070789659}
   - component: {fileID: 699414218961161691}
-  - component: {fileID: 5750887650567878539}
   - component: {fileID: 8009686491169260030}
-  - component: {fileID: -1619993628755283740}
+  - component: {fileID: -7419167774936539525}
   m_Layer: 0
   m_Name: ShipPowerup
-  m_TagString: Untagged
+  m_TagString: MiniShipPowerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,19 +98,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5750887650567878539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461983795029188031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85e9c6e8e51947b449137f4e85c570e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpIndicator: {fileID: 0}
 --- !u!114 &8009686491169260030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +113,19 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -1619993628755283740}
+      - m_Target: {fileID: 11400000, guid: e897b762a892d634f997a137c732ee19, type: 2}
+        m_TargetAssemblyTypeName: DestroyerBehaviour, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -7419167774936539525}
         m_TargetAssemblyTypeName: DestroyerBehaviour, Assembly-CSharp
         m_MethodName: Destroy
         m_Mode: 1
@@ -139,7 +137,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-1619993628755283740
+  playerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-7419167774936539525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

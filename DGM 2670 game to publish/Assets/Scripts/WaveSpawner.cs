@@ -18,6 +18,8 @@ public class WaveSpawner : MonoBehaviour
     private Wave currentWave;
     private int currentWaveNumber;
     private float nextSpawnTime;
+    
+    // Wave Spawner found on YouTube from ChronoABI "Simple Wave spawner in Unity 2D"
 
     private void Update()
     {
