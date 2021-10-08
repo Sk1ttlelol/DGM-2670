@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class EnemyHealth : MonoBehaviour
@@ -8,6 +9,8 @@ public class EnemyHealth : MonoBehaviour
    public IntData score;
    public FloatData damage;
    public int scoreToAdd;
+
+   public UnityEvent addScore;
    
    private DealDamage dealDamageScript;
    
@@ -55,6 +58,6 @@ public class EnemyHealth : MonoBehaviour
 
    void AddScore()
    {
-      
+      addScore.Invoke();
    }
 }
