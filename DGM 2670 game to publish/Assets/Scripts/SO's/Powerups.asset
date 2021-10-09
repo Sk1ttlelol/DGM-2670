@@ -15,7 +15,7 @@ MonoBehaviour:
   drops:
   - thisDrop: {fileID: 6642037306605848123, guid: e67843bfc7c1a9f4282305260dd9678c, type: 3}
     dropChance: 35
-  - thisDrop: {fileID: 2112907174056362330, guid: 874610449e78f5e409df57ef3942c7bc, type: 3}
+  - thisDrop: {fileID: 5405204995497470575, guid: 9eda276f32e167947b8951bb03c73567, type: 3}
     dropChance: 10
   - thisDrop: {fileID: 1461983795029188031, guid: c5096f2efd8ca884894d889e60698e71, type: 3}
     dropChance: 10
