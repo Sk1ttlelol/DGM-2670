@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1461983795029188031
+--- !u!1 &3757518685600969807
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8680292015871396389}
-  - component: {fileID: 7833716430967300570}
-  - component: {fileID: 2230669684070789659}
-  - component: {fileID: 699414218961161691}
-  - component: {fileID: 8009686491169260030}
-  - component: {fileID: -7419167774936539525}
+  - component: {fileID: 3757518685600969792}
+  - component: {fileID: 3757518685600969795}
+  - component: {fileID: 3757518685600969794}
+  - component: {fileID: 3757518685600969805}
+  - component: {fileID: 3757518685600969804}
+  - component: {fileID: -7210311683747819009}
   m_Layer: 0
-  m_Name: ShipPowerup
-  m_TagString: MiniShipPowerup
+  m_Name: Coin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8680292015871396389
+--- !u!4 &3757518685600969792
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461983795029188031}
+  m_GameObject: {fileID: 3757518685600969807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.07, y: -0.19, z: 0}
+  m_LocalPosition: {x: 1.77, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7833716430967300570
+--- !u!33 &3757518685600969795
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461983795029188031}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2230669684070789659
+  m_GameObject: {fileID: 3757518685600969807}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3757518685600969794
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461983795029188031}
+  m_GameObject: {fileID: 3757518685600969807}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c914ca432d9ea9345b64187e4679d833, type: 2}
+  - {fileID: 2100000, guid: dd12c6ec39108ac469a7181ed22b00b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,26 +85,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &699414218961161691
-BoxCollider:
+--- !u!135 &3757518685600969805
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461983795029188031}
+  m_GameObject: {fileID: 3757518685600969807}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8009686491169260030
+--- !u!114 &3757518685600969804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461983795029188031}
+  m_GameObject: {fileID: 3757518685600969807}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2126f42844ca6504097b9224ab6589b8, type: 3}
@@ -113,19 +113,19 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: e897b762a892d634f997a137c732ee19, type: 2}
-        m_TargetAssemblyTypeName: DestroyerBehaviour, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 11400000, guid: 50fbd3316d6a3c2489227c9c1bb89dbf, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: AddToValue
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 500
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -7419167774936539525}
+      - m_Target: {fileID: -7210311683747819009}
         m_TargetAssemblyTypeName: DestroyerBehaviour, Assembly-CSharp
         m_MethodName: Destroy
         m_Mode: 1
@@ -140,13 +140,13 @@ MonoBehaviour:
   playerEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-7419167774936539525
+--- !u!114 &-7210311683747819009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461983795029188031}
+  m_GameObject: {fileID: 3757518685600969807}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c164671d76953d042914bb404cbdabbd, type: 3}
