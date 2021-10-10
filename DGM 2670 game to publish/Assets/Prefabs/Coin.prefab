@@ -153,4 +153,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 2
-  timedDestruction: 0
+  timedDestruction: 1
