@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4512971, g: 0.5001585, b: 0.5689454, a: 1}
+  m_IndirectSpecularColor: {r: 0.45129603, g: 0.50015604, b: 0.56893307, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -529,7 +529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &204533599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7236,13 +7236,9 @@ MonoBehaviour:
     - {fileID: 3038819719473142279, guid: d450e43db3db8a145a96994216873eca, type: 3}
     spawnInterval: 1
   - waveName: Final Wave
-    noOfEnemies: 5
+    noOfEnemies: 1
     typeOfEnemies:
     - {fileID: 1199276590755073424, guid: 248cb444c13a61a4bb1eb241984cb182, type: 3}
-    - {fileID: 3657391970363884423, guid: 720e5e37f3ddcab469dc17aef934d131, type: 3}
-    - {fileID: 6596352303403876727, guid: fa15ab9b96f58394494006033b6f55cd, type: 3}
-    - {fileID: 8145274933507002698, guid: 5ab5151b099172647907562348503b0c, type: 3}
-    - {fileID: 3038819719473142279, guid: d450e43db3db8a145a96994216873eca, type: 3}
     spawnInterval: 1
   spawnLocations:
   - {fileID: 1766180544}
