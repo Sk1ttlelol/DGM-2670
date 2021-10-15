@@ -6,10 +6,6 @@ public class EnemyHealth : MonoBehaviour
 {
    public float enemyHealth = 10f;
    public LootTable thisDrop;
-   public IntData score;
-   public FloatData damage;
-   public int scoreToAdd;
-
    public UnityEvent addScore;
    
    private DealDamage dealDamageScript;
@@ -21,13 +17,12 @@ public class EnemyHealth : MonoBehaviour
 
       if (enemyHealth <= 0)
       {
-         EnemyDeath();
          CreateDrop();
          AddScore();
       }
    }
                // This and Loot Table SO found on YouTube from GameDevHQ "How to Create a Random Loot Table in Unity C#
-   private void CreateDrop()
+   public void CreateDrop()
    {
       if (thisDrop != null)
       {
@@ -50,14 +45,15 @@ public class EnemyHealth : MonoBehaviour
          //RemoveHealth(damage);
       }
    }
-
+   
+   public void AddScore()
+   {
+      addScore.Invoke();
+      EnemyDeath();
+   }
+   
    void EnemyDeath()
    {
       Destroy(gameObject);
-   }
-
-   void AddScore()
-   {
-      addScore.Invoke();
    }
 }

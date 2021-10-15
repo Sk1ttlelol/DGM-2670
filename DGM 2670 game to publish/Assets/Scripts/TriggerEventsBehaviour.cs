@@ -7,6 +7,11 @@ public class TriggerEventsBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         triggerEnterEvent.Invoke();
+        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerEvent.Invoke();
+        }
     }
    
 
