@@ -8,12 +8,14 @@ public class ShieldPowerup : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            Destroy(other.gameObject);
             shieldTriggerEvent.Invoke();
         }
         
         if (other.gameObject.CompareTag("EnemyBullet"))
         {
             Destroy(other.gameObject);
+            shieldTriggerEvent.Invoke();
         }
     }
 }

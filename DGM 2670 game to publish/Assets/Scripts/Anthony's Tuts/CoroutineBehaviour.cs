@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class CoroutineBehaviour : MonoBehaviour
 {
     public UnityEvent startEvent, startShieldEvent, endShieldEvent;
-    public bool canRun = true;
+    public bool canRun = false;
     public float holdTime = 0.5f;
     private WaitForSeconds wfs;
 
@@ -17,12 +17,14 @@ public class CoroutineBehaviour : MonoBehaviour
     
     IEnumerator CoroutineSimple()
     {
+        canRun = true;
         wfs = new WaitForSeconds(holdTime);
         startShieldEvent.Invoke();
         
         while (canRun)
         {
             yield return wfs;
+            canRun = false;
             endShieldEvent.Invoke();
         }
     }

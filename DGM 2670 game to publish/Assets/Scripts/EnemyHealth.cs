@@ -19,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
       {
          CreateDrop();
          AddScore();
+         EnemyDeath();
       }
    }
                // This and Loot Table SO found on YouTube from GameDevHQ "How to Create a Random Loot Table in Unity C#
@@ -49,7 +50,6 @@ public class EnemyHealth : MonoBehaviour
    public void AddScore()
    {
       addScore.Invoke();
-      EnemyDeath();
    }
    
    void EnemyDeath()
