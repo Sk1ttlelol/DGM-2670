@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -8,8 +8,10 @@ public class EnemyHealth : MonoBehaviour
    public LootTable thisDrop;
    public UnityEvent addScore;
    
-   private DealDamage dealDamageScript;
+
    
+   private DealDamage dealDamageScript;
+
 
    public void RemoveHealth(float removeHealth)
    {
