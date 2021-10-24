@@ -44,7 +44,7 @@ public class WaveSpawner : MonoBehaviour
         {
             GameObject randomEnemy = currentWave.typeOfEnemies[Random.Range(0, currentWave.typeOfEnemies.Length)];
             Transform randomPoint = spawnLocations[Random.Range(0, spawnLocations.Length)];
-            Instantiate(randomEnemy, randomPoint.position, Quaternion.identity);
+            Instantiate(randomEnemy, randomPoint.position, Quaternion.Euler(90, -180, 0));
             currentWave.noOfEnemies--;
             nextSpawnTime = Time.time + currentWave.spawnInterval;
 
