@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8410129773038607587}
   - component: {fileID: 7637123348806048201}
   - component: {fileID: 3880689271000459272}
-  - component: {fileID: 4957996205925903686}
   - component: {fileID: -4512298299118682013}
   - component: {fileID: -2067752846879299958}
   - component: {fileID: 1907867752424637987}
+  - component: {fileID: 1424806790405887036}
   m_Layer: 0
   m_Name: Missle
   m_TagString: Bullet
@@ -86,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4957996205925903686
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7041819913548015702}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-4512298299118682013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,3 +126,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!65 &1424806790405887036
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7041819913548015702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7125749, y: 0.72733116, z: 2.5171719}
+  m_Center: {x: -0.022748288, y: -0.0000011796752, z: 3.4651517e-22}
