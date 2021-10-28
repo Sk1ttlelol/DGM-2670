@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 [System.Serializable]
 public class Wave
 {
@@ -14,7 +16,11 @@ public class WaveSpawner : MonoBehaviour
     public Wave[] waves;
     public Transform[] spawnLocations;
 
+    public Animator animator;
+    public Text waveName;
+
     private bool canSpawn = true;
+    private bool canAnimate = false;
     private Wave currentWave;
     private int currentWaveNumber;
     private float nextSpawnTime;
@@ -26,13 +32,25 @@ public class WaveSpawner : MonoBehaviour
         currentWave = waves[currentWaveNumber];
         SpawnWave();
         GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (totalEnemies.Length == 0 && !canSpawn && currentWaveNumber+1 != waves.Length)
+        if (totalEnemies.Length == 0 )
         {
-            
+            if (currentWaveNumber + 1 != waves.Length )
+            {
+                if (canAnimate)
+                {
+                    waveName.text = waves[currentWaveNumber + 1].waveName;
+                    animator.SetTrigger("WaveComplete");
+                    canAnimate = false;
+                }
+            } 
+            else
+            {
+                Debug.Log("Game Finish");
+            }
         }
     }
 
-    void SpawnNextWave()
+    public void SpawnNextWave()
     {
         currentWaveNumber++;
         canSpawn = true;
@@ -51,6 +69,7 @@ public class WaveSpawner : MonoBehaviour
             if (currentWave.noOfEnemies == 0)
             {
                 canSpawn = false;
+                canAnimate = true;
             }
         }
         

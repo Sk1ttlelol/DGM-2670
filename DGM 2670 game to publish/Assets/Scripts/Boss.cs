@@ -11,7 +11,7 @@ public class Boss : MonoBehaviour
     
     private bool bossInArena = false;
     
-    private bool topHit = true, botHit = false, leftHit = false, rightHit = true;
+    private bool topHit = true, botHit = true, leftHit = true, rightHit = false;
 
 
     public float speed;
@@ -34,23 +34,23 @@ public class Boss : MonoBehaviour
         if (topHit == true)
         {
             botHit = false;
-            transform.Translate(Vector3.down * Time.deltaTime * speed);
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
         
         if (botHit == true)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * speed);
+            transform.Translate(Vector3.back * Time.deltaTime * speed);
         }
         
         if (rightHit == true)
         {
             leftHit = false;
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
+            transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
         
         if (leftHit == true)
         {
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
+            transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
         
         if (transform.position.y >= topBound)
