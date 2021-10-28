@@ -116,6 +116,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  checkEnemies:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 30649131128f1434b8581bf2c485cfdb, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8041531829976152455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,10 +147,6 @@ MonoBehaviour:
   topBound: 5.4
   botBound: -3.55
   sideBound: 1.8
-  topHit: 1
-  botHit: 1
-  leftHit: 1
-  rightHit: 0
   speed: 2
 --- !u!114 &8764370599462471410
 MonoBehaviour:
