@@ -8,6 +8,6 @@ public class RotatingMovement : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate (0, 0, Rotation *Time.deltaTime);
+        transform.Rotate (35 * Time.deltaTime, 25 * Time.deltaTime, Rotation *Time.deltaTime);
     }
 }

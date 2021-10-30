@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb45dd47a09647942838c755c3bdf812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
+  enemyHealth: 20
   thisDrop: {fileID: 11400000, guid: 136c4570fc5c1af42900d1abd56e970c, type: 2}
   addScore:
     m_PersistentCalls:
