@@ -133,7 +133,7 @@ MonoBehaviour:
   botBound: -3.55
   sideBound: 1.8
   speed: 2
-  rotationSpeed: 25
+  rotationSpeed: 50
 --- !u!114 &8764370599462471410
 MonoBehaviour:
   m_ObjectHideFlags: 0

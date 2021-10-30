@@ -19,7 +19,7 @@ public class Boss : MonoBehaviour
     private void Update()
     {
 
-        //transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
       
         if (bossInArena == false)
         {
@@ -35,23 +35,23 @@ public class Boss : MonoBehaviour
         if (topHit == true)
         {
             botHit = false;
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            transform.Translate(Vector3.down * Time.deltaTime * speed,Space.World);
         }
         
         if (botHit == true)
         {
-            transform.Translate(Vector3.back * Time.deltaTime * speed);
+            transform.Translate(Vector3.up * Time.deltaTime * speed,Space.World);
         }
         
         if (rightHit == true)
         {
             leftHit = false;
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
+            transform.Translate(Vector3.left * Time.deltaTime * speed,Space.World);
         }
         
         if (leftHit == true)
         {
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
+            transform.Translate(Vector3.right * Time.deltaTime * speed,Space.World);
         }
         
         if (transform.position.y >= topBound)
