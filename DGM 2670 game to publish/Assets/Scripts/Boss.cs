@@ -12,13 +12,14 @@ public class Boss : MonoBehaviour
     private bool bossInArena = false;
     
     private bool topHit = true, botHit = true, leftHit = true, rightHit = false;
-
-
-    public float speed;
+    
+    public float speed, rotationSpeed;
     
 
     private void Update()
     {
+
+        //transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
       
         if (bossInArena == false)
         {

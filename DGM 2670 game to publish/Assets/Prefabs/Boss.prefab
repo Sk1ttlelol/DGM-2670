@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: -6986354545510693522}
   - component: {fileID: 8041531829976152455}
   - component: {fileID: 8764370599462471410}
-  - component: {fileID: -8071462896500030113}
-  - component: {fileID: 9210076150286344445}
+  - component: {fileID: -5464087548907727342}
+  - component: {fileID: -6094778521194691458}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -116,21 +116,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  checkEnemies:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 30649131128f1434b8581bf2c485cfdb, type: 2}
-        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-        m_MethodName: RaiseAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &8041531829976152455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +133,7 @@ MonoBehaviour:
   botBound: -3.55
   sideBound: 1.8
   speed: 2
+  rotationSpeed: 25
 --- !u!114 &8764370599462471410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +188,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!54 &-8071462896500030113
+--- !u!54 &-5464087548907727342
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,7 +204,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &9210076150286344445
+--- !u!65 &-6094778521194691458
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
