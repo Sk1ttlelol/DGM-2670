@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 [System.Serializable]
 public class Wave
@@ -24,38 +26,61 @@ public class WaveSpawner : MonoBehaviour
     private Wave currentWave;
     private int currentWaveNumber;
     private float nextSpawnTime;
+    
+    public bool canRun = false;
+    public float holdTime = 1f;
+    private WaitForSeconds wfs;
 
     public GameObject[] totalEnemies;
-    
+
+    private void Start()
+    {
+        StartCoroutine(CheckEnemiesCoroutine());
+    }
+
     // Wave Spawner found on YouTube from ChronoABI "Simple Wave spawner in Unity 2D"
 
     private void Update()
     {
         currentWave = waves[currentWaveNumber];
         SpawnWave();
-        GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (totalEnemies.Length == 0 )
         {
             if (currentWaveNumber + 1 != waves.Length )
             {
                 if (canAnimate)
                 {
+                    StopCoroutine(CheckEnemiesCoroutine());
                     waveName.text = waves[currentWaveNumber + 1].waveName;
                     animator.SetTrigger("WaveComplete");
                     canAnimate = false;
                 }
-            } 
-            else
-            {
-                Debug.Log("Game Finish");
             }
         }
+    }
+
+    IEnumerator CheckEnemiesCoroutine()
+    {
+        canRun = true;
+        wfs = new WaitForSeconds(holdTime);
+        while (canRun)
+        {
+            yield return wfs;
+            totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+            Debug.Log("Checking For Enemies");
+        }
+    }
+
+    public void StartWaveAnimation()
+    {
+        
     }
 
     public void SpawnNextWave()
     {
         currentWaveNumber++;
         canSpawn = true;
+        StartCoroutine(CheckEnemiesCoroutine());
     }
 
     void SpawnWave()

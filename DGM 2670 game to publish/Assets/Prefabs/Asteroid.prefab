@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c164671d76953d042914bb404cbdabbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 10
+  holdTime: 6
   timedDestruction: 1
   checkEnemies:
     m_PersistentCalls:
