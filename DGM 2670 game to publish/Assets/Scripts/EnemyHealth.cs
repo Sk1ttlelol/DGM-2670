@@ -7,6 +7,8 @@ public class EnemyHealth : MonoBehaviour
    public float enemyHealth = 10f;
    public LootTable thisDrop;
    public UnityEvent addScore;
+
+   public Vector3 offset;
    
 
    
@@ -32,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
          GameObject current = thisDrop.GetPowerup();
          if (current != null)
          {
-            Instantiate(current.gameObject, transform.position, Quaternion.identity);
+            Instantiate(current.gameObject, transform.position + offset, Quaternion.identity);
          }
       }
          

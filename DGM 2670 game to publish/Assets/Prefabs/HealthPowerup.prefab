@@ -189,4 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 3
-  timedDestruction: 1
+  timedDestruction: 0
+  checkEnemies:
+    m_PersistentCalls:
+      m_Calls: []

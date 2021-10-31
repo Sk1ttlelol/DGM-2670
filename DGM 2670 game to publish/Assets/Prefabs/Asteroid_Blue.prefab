@@ -173,6 +173,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  offset: {x: 0, y: 0, z: -1}
 --- !u!114 &-2495994898168093823
 MonoBehaviour:
   m_ObjectHideFlags: 0
