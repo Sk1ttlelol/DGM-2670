@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyPrefabMovement : MonoBehaviour
 {
     public float speed;
+    public bool canMove;
     
 
     // Update is called once per frame
