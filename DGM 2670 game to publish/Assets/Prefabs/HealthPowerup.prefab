@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6642037306605848117}
   - component: {fileID: 6642037306605848122}
   - component: {fileID: -1860766587745339141}
+  - component: {fileID: -3430262438176877206}
   m_Layer: 0
   m_Name: HealthPowerup
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6642037306605848123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.31, y: 2.11, z: 0}
-  m_LocalScale: {x: 0.38515, y: 0.38515, z: 0.38515}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6642037306605848123}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: aa71617ef84e00e469c8384599d6395a, type: 3}
 --- !u!23 &6642037306605848116
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c8fe2ea0f139c846926c561e5b0322c, type: 2}
+  - {fileID: 2100000, guid: 0c2ab8410951b5042955598cca68a2a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -193,3 +194,16 @@ MonoBehaviour:
   checkEnemies:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-3430262438176877206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642037306605848123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40296a2c7f91f14d8f200a44a2c9932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rotation: 0
