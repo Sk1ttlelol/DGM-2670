@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drops:
   - thisDrop: {fileID: 6642037306605848123, guid: e67843bfc7c1a9f4282305260dd9678c, type: 3}
-    dropChance: 80
+    dropChance: 10
   - thisDrop: {fileID: 5405204995497470575, guid: 9eda276f32e167947b8951bb03c73567, type: 3}
     dropChance: 5
   - thisDrop: {fileID: 3545124100602371840, guid: c99259856ee7ce74595144463ecff0b4, type: 3}
