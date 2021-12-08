@@ -26,6 +26,8 @@ public class WaveSpawner : MonoBehaviour
     private Wave currentWave;
     private int currentWaveNumber;
     private float nextSpawnTime;
+
+    public bool gameIsActive;
     
     public bool canRun = false;
     public float holdTime = 1f;
@@ -38,22 +40,30 @@ public class WaveSpawner : MonoBehaviour
         StartCoroutine(CheckEnemiesCoroutine());
     }
 
+    public void SetBool()
+    {
+        gameIsActive = true;
+    }
+
     // Wave Spawner found on YouTube from ChronoABI "Simple Wave spawner in Unity 2D"
 
     private void Update()
     {
-        currentWave = waves[currentWaveNumber];
-        SpawnWave();
-        if (totalEnemies.Length == 0 )
+        if (gameIsActive == true)
         {
-            if (currentWaveNumber + 1 != waves.Length )
+            currentWave = waves[currentWaveNumber];
+            SpawnWave();
+            if (totalEnemies.Length == 0)
             {
-                if (canAnimate)
+                if (currentWaveNumber + 1 != waves.Length)
                 {
-                    StopCoroutine(CheckEnemiesCoroutine());
-                    waveName.text = waves[currentWaveNumber + 1].waveName;
-                    animator.SetTrigger("WaveComplete");
-                    canAnimate = false;
+                    if (canAnimate)
+                    {
+                        StopCoroutine(CheckEnemiesCoroutine());
+                        waveName.text = waves[currentWaveNumber + 1].waveName;
+                        animator.SetTrigger("WaveComplete");
+                        canAnimate = false;
+                    }
                 }
             }
         }

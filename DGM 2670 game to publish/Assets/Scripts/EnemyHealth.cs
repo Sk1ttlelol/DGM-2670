@@ -44,7 +44,7 @@ public class EnemyHealth : MonoBehaviour
    {
       if (other.gameObject.CompareTag("Bullet"))
       {
-         Debug.Log("EnemyHit" + enemyHealth);
+         //Debug.Log("EnemyHit" + enemyHealth);
          DealDamage dealDamageScript = other.gameObject.GetComponent<DealDamage>();
          RemoveHealth(dealDamageScript.damageEnemy);
          //RemoveHealth(damage);
