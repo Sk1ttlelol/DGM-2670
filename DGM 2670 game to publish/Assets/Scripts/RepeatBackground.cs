@@ -20,7 +20,7 @@ public class RepeatBackground : MonoBehaviour
     
     void Update()
     {
-        if(canSpawn == true && transform.position.y <= 6)
+        if(canSpawn == true && transform.position.y <= 6.1)
         {
             Instantiate(backgroundPrefab, spawnPos, Quaternion.identity);
             canSpawn = false;
