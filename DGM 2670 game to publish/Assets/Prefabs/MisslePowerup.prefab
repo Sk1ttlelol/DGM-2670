@@ -113,6 +113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 2
   timedDestruction: 0
+  checkEnemies:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &-7936548145205546277
 MonoBehaviour:
   m_ObjectHideFlags: 0
