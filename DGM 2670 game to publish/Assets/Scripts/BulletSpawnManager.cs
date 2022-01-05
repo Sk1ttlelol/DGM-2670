@@ -9,6 +9,7 @@ public class BulletSpawnManager : MonoBehaviour
     public float startDelay;
     public float repeatRate;
     private Vector3 spawnPos;
+    public float yOffset;
     
     // Start is called before the first frame update
     void Start()

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3545124100602371843}
   - component: {fileID: 4344983655452786217}
   - component: {fileID: -1195591351885962285}
+  - component: {fileID: 4307171977373686881}
   m_Layer: 0
   m_Name: ShieldPowerup
   m_TagString: Untagged
@@ -28,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3545124100602371840}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: -8.7256565, y: 3.6452718, z: -2.521852}
-  m_LocalScale: {x: 0.2635, y: 0.2635, z: 0.2635}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &3545124100602371845
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3545124100602371840}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300004, guid: b416babc01d186040bab8cd773f417f6, type: 3}
 --- !u!23 &3545124100602371842
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5fdf0f7976c850943acc01543b8b49c9, type: 2}
+  - {fileID: 2100000, guid: eefdff8d54f3b3f46b588783854d7fd6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -166,3 +167,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 2
   timedDestruction: 0
+  checkEnemies:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4307171977373686881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3545124100602371840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40296a2c7f91f14d8f200a44a2c9932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRotation: 0
+  yRotation: 45
+  zRotation: 0
