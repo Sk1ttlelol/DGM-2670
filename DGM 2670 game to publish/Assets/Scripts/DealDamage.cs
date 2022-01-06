@@ -8,10 +8,18 @@ public class DealDamage : MonoBehaviour
     
     public void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.CompareTag("EnemyBullet"))
+        {
+            spawnEffects.Invoke();
+            Destroy(other.gameObject);
+        }
+        
         if (other.gameObject.CompareTag("Enemy"))
         {
             spawnEffects.Invoke();
             Destroy(gameObject);
         }
+        
+        
     }
 }

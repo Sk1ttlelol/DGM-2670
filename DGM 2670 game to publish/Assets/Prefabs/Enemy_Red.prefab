@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -3603927054735297953}
   - component: {fileID: -2029908792768828786}
   - component: {fileID: 7662817735410339568}
+  - component: {fileID: 2174792835973581139}
   m_Layer: 0
   m_Name: Enemy_Red
   m_TagString: Enemy
@@ -177,6 +178,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  spawnEffect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2174792835973581139}
+        m_TargetAssemblyTypeName: EffectsBehavior, Assembly-CSharp
+        m_MethodName: SpawnEffect3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   offset: {x: 0, y: 0, z: -1}
 --- !u!114 &-3603927054735297953
 MonoBehaviour:
@@ -246,7 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2171962145296555805, guid: a923a07ec06fd5545bbe64efb25176cc, type: 3}
   startDelay: 0.5
-  repeatRate: 1
+  repeatRate: 0.2
+  yOffset: 0
 --- !u!136 &7662817735410339568
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -261,3 +278,18 @@ CapsuleCollider:
   m_Height: 1.8212554
   m_Direction: 1
   m_Center: {x: 0, y: -0.0000080168265, z: -1.9113602e-12}
+--- !u!114 &2174792835973581139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199276590755073424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ba29a2ef46bc446926b92f83ce4967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FXprefab: {fileID: 4794043405585894037, guid: 37138c0c33167b04fa1fb90b7f5a794f, type: 3}
+  FXprefab2: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
+  FXprefab3: {fileID: 8038344524183138613, guid: 0277167a12290af47801444830a2be97, type: 3}

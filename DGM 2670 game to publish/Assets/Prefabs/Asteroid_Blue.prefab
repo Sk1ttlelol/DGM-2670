@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -2495994898168093823}
   - component: {fileID: 6846207869630277116}
   - component: {fileID: 7202722608724419539}
+  - component: {fileID: 8746493274170811215}
   m_Layer: 0
   m_Name: Asteroid_Blue
   m_TagString: Enemy
@@ -174,6 +175,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  spawnEffect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8746493274170811215}
+        m_TargetAssemblyTypeName: EffectsBehavior, Assembly-CSharp
+        m_MethodName: SpawnEffect2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   offset: {x: 0, y: 0, z: -1}
 --- !u!114 &-2495994898168093823
 MonoBehaviour:
@@ -260,3 +276,18 @@ MonoBehaviour:
   xRotation: 30
   yRotation: 0
   zRotation: 45
+--- !u!114 &8746493274170811215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187988673565759644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ba29a2ef46bc446926b92f83ce4967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FXprefab: {fileID: 4794043405585894037, guid: 37138c0c33167b04fa1fb90b7f5a794f, type: 3}
+  FXprefab2: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
+  FXprefab3: {fileID: 8038344524183138613, guid: 0277167a12290af47801444830a2be97, type: 3}

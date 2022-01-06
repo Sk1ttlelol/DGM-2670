@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
    public float enemyHealth = 10f;
    public LootTable thisDrop;
-   public UnityEvent addScore;
+   public UnityEvent addScore, spawnEffect;
 
    public Vector3 offset;
    
@@ -21,11 +21,17 @@ public class EnemyHealth : MonoBehaviour
 
       if (enemyHealth <= 0)
       {
+         SpawnEffect();
          CreateDrop();
          AddScore();
          EnemyDeath();
       }
    }
+   public void SpawnEffect()
+   {
+      spawnEffect.Invoke();
+   }
+   
                // This and Loot Table SO found on YouTube from GameDevHQ "How to Create a Random Loot Table in Unity C#
    public void CreateDrop()
    {
@@ -39,6 +45,7 @@ public class EnemyHealth : MonoBehaviour
       }
          
    }
+   
    
    public void OnCollisionEnter(Collision other)
    {

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: -2067752846879299958}
   - component: {fileID: 1907867752424637987}
   - component: {fileID: 1424806790405887036}
+  - component: {fileID: 6361588862119682667}
+  - component: {fileID: -3355151223956379119}
   m_Layer: 0
   m_Name: Missle
   m_TagString: Bullet
@@ -116,6 +118,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnemy: 100
+  spawnEffects:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -3355151223956379119}
+        m_TargetAssemblyTypeName: EffectsBehavior, Assembly-CSharp
+        m_MethodName: SpawnEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1907867752424637987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,3 +159,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7125749, y: 0.72733116, z: 2.5171719}
   m_Center: {x: -0.022748288, y: -0.0000011796752, z: 3.4651517e-22}
+--- !u!114 &6361588862119682667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7041819913548015702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c164671d76953d042914bb404cbdabbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTime: 2
+  timedDestruction: 1
+  checkEnemies:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-3355151223956379119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7041819913548015702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ba29a2ef46bc446926b92f83ce4967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FXprefab: {fileID: 4794043405585894037, guid: 37138c0c33167b04fa1fb90b7f5a794f, type: 3}
+  FXprefab2: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
+  FXprefab3: {fileID: 8038344524183138613, guid: 0277167a12290af47801444830a2be97, type: 3}

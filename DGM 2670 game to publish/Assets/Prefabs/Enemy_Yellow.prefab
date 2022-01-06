@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5253053429206010315}
   - component: {fileID: 5253053429206010308}
   - component: {fileID: 5253053429206010309}
+  - component: {fileID: 5116669992970957104}
   m_Layer: 0
   m_Name: Enemy_Yellow
   m_TagString: Enemy
@@ -161,6 +162,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  spawnEffect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5116669992970957104}
+        m_TargetAssemblyTypeName: EffectsBehavior, Assembly-CSharp
+        m_MethodName: SpawnEffect3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   offset: {x: 0, y: 0, z: -1}
 --- !u!114 &5253053429206010308
 MonoBehaviour:
@@ -245,3 +261,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5116669992970957104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5253053429206010310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ba29a2ef46bc446926b92f83ce4967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FXprefab: {fileID: 4794043405585894037, guid: 37138c0c33167b04fa1fb90b7f5a794f, type: 3}
+  FXprefab2: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
+  FXprefab3: {fileID: 8038344524183138613, guid: 0277167a12290af47801444830a2be97, type: 3}
