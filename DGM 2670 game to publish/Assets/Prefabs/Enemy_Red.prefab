@@ -262,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2171962145296555805, guid: a923a07ec06fd5545bbe64efb25176cc, type: 3}
   startDelay: 0.5
-  repeatRate: 0.2
+  repeatRate: 0.5
   yOffset: 0
 --- !u!136 &7662817735410339568
 CapsuleCollider:
