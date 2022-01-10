@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class RepeatBackground : MonoBehaviour
 {
-    public Vector3 spawnPos;
+    private Vector3 spawnPos;
     public GameObject backgroundPrefab;
 
     public bool canSpawn = true;
+    private float repeatWidth;
     
     
     void Start()
     {
-        // Get start position on Background
-        
-        // Finding half of the background size on the X
+        spawnPos = transform.position;
+        repeatWidth = GetComponent<BoxCollider>().size.y / 2;
         
     }
     
     void Update()
+    {
+        if(transform.position.y < spawnPos.y - repeatWidth)
+        {
+            transform.position = spawnPos;
+        }
+    }
+
+    void CoolStuff()
     {
         if(canSpawn == true && transform.position.y <= 6.1)
         {
