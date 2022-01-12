@@ -193,6 +193,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 635c9b83bb0ba7e40878f8798e849196, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   offset: {x: 0, y: 0, z: -1}
 --- !u!114 &-3603927054735297953
 MonoBehaviour:
@@ -239,6 +251,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2171962145296555805, guid: a923a07ec06fd5545bbe64efb25176cc, type: 3}
   startDelay: 0.5
   repeatRate: 0.5
+  bulletSound: {fileID: 0}
   yOffset: 0
 --- !u!136 &7662817735410339568
 CapsuleCollider:
