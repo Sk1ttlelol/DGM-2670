@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MissleLauncher : MonoBehaviour
 {
     public GameObject misslePrefab;
+    public UnityEvent missleSound;
     private Vector3 spawnPos;
     public bool canShoot = false;
     public float startDelay;
@@ -40,6 +42,7 @@ public class MissleLauncher : MonoBehaviour
     public void SpawnMissle()
     {
         Instantiate(misslePrefab, spawnPos, misslePrefab.transform.rotation);
+        missleSound.Invoke();
     }
 
   

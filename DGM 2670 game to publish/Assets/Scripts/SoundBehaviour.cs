@@ -5,8 +5,8 @@ using UnityEngine;
 public class SoundBehaviour : MonoBehaviour
 {
     
-    public AudioClip deathSound, powerupSound;
-    public AudioSource enemyAudio, powerupAudio;
+    public AudioClip deathSound, powerupSound, missleSound;
+    public AudioSource enemyAudio, powerupAudio, missleAudio;
    
     void Start()
     {
@@ -21,5 +21,10 @@ public class SoundBehaviour : MonoBehaviour
     public void MakePowerupSound()
     {
         powerupAudio.PlayOneShot(powerupSound, 1.0f);
+    }
+
+    public void MakeMissleSound()
+    {
+        missleAudio.PlayOneShot(missleSound, 1.0f);
     }
 }
