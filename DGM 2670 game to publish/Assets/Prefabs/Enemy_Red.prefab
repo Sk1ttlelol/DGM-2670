@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c164671d76953d042914bb404cbdabbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 6
+  holdTime: 5
   timedDestruction: 1
   checkEnemies:
     m_PersistentCalls:
@@ -252,6 +252,7 @@ MonoBehaviour:
   startDelay: 0.5
   repeatRate: 0.5
   bulletSound: {fileID: 0}
+  playerAudio: {fileID: 0}
   yOffset: 0
 --- !u!136 &7662817735410339568
 CapsuleCollider:

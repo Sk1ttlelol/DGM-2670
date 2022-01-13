@@ -8,14 +8,13 @@ public class BulletSpawnManager : MonoBehaviour
     public float repeatRate;
 
     public AudioClip bulletSound;
-    private AudioSource playerAudio;
+    public AudioSource playerAudio;
     private Vector3 spawnPos;
     public float yOffset;
     
     // Start is called before the first frame update
     void Start()
     {
-        playerAudio = GetComponent<AudioSource>();
         InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
     }
 
@@ -27,6 +26,6 @@ public class BulletSpawnManager : MonoBehaviour
     void SpawnObstacle()
     {
         Instantiate(bulletPrefab, spawnPos, bulletPrefab.transform.rotation);
-        //playerAudio.PlayOneShot(bulletSound, .1f);
+        playerAudio.PlayOneShot(bulletSound, .1f);
     }
 }
