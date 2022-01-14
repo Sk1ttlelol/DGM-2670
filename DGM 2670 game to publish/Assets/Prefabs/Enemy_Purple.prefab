@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  canMove: 0
+  canMove: 1
 --- !u!114 &586338979920761264
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class EnemyPrefabMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * Time.deltaTime * speed,Space.World);
+        if (canMove == true)
+        {
+            transform.Translate(Vector3.down * Time.deltaTime * speed,Space.World);  
+        }
     }
 }
